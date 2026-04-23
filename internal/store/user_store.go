@@ -1,16 +1,13 @@
 package store
 
-import(
+import (
 	"sync"
-	"naod-goDev_log/internal/models"
+
+	"github.com/naodEthiop/naod-goDev_log.git/internal/models"
 )
 
-
-
-
 var (
-	userCache = make(map[int]models.User)
-	cacheMutex  sync.RWMutex
-	nextID = 1
-
+	UserCache  = make(map[int]models.User)
+	CacheMutex sync.RWMutex
+	NextID     = 1
 )
